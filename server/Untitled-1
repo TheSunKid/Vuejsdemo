@@ -1,0 +1,12 @@
+terminal :
+*** front end port :  8080
+ cd myproject 
+ npm i 
+ npm run dev 
+*** Server
+ cd server 
+ npm i
+ npm start
+
+******
+http:localhost:8080/posts

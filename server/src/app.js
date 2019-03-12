@@ -24,9 +24,10 @@ app.listen(process.env.PORT || 8082)
 
 // MONGOES CONNECT
 
-mongoose.connect('mongodb+srv://bm_user:demo12345@cluster0-wrxnr.azure.mongodb.net/test?retryWrites=true');
+var dev_db_url = 'mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
 
-var db = mongoose.connection;
+var db = mongoDB.connection;
 
 db.on("error", console.error.bind(console, "connection error"));
 
